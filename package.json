@@ -10,6 +10,7 @@
   "author": "Haward Jie",
   "license": "GPL-3.0-only",
   "dependencies": {
+    "express": "^4.21.1",
     "uuid": "^11.0.3"
   }
 }

@@ -15,7 +15,7 @@ class ColumnStore {
   createTable(dbName, tableName, columns) {
     const db = this.databases.get(dbName);
     if (!db) {
-      throw new Error('Database ' + dbName + ' not found');
+      throw new Error(`Database ${dbName} not found`);
     }
 
     const table = {
@@ -37,12 +37,12 @@ class ColumnStore {
   insert(dbName, tableName, data) {
     const db = this.databases.get(dbName);
     if (!db) {
-      throw new Error('Database ' + dbName + ' not found');
+      throw new Error(`Database ${dbName} not found`);
     }
 
     const table = db.get(tableName);
     if (!table) {
-      throw new Error('Table ' + tableName + ' not found');
+      throw new Error(`Table ${tableName} not found`);
     }
 
     // Insert record
@@ -58,12 +58,12 @@ class ColumnStore {
   select(dbName, tableName, columnNames = []) {
     const db = this.databases.get(dbName);
     if (!db) {
-      throw new Error('Database ' + dbName + ' not found');
+      throw new Error(`Database ${dbName} not found`);
     }
 
     const table = db.get(tableName);
     if (!table) {
-      throw new Error('Table ' + tableName + ' not found');
+      throw new Error(`Table ${tableName} not found`);
     }
 
     const cols =
@@ -83,6 +83,7 @@ class ColumnStore {
   }
 }
 
+/*----------------------------------------------------------------
 const db = new ColumnStore();
 const dbName = 'investmentDB';
 const investorsTableName = 'investors';
@@ -174,5 +175,7 @@ console.log(
   'investors:',
   db.select(dbName, investorsTableName, ['investorId', 'firstName', 'email'])
 );
+
+----------------------------------------------------------------*/
 
 module.exports = ColumnStore;

@@ -24,5 +24,5 @@ npm install uuid
 ## Step 3: Run the application
 
 ```javascript
-node index.js
+node app.js
 ```
