@@ -26,3 +26,58 @@ npm install uuid
 ```javascript
 node app.js
 ```
+
+## Examples:
+
+Insert a new record
+
+```
+POST http://localhost:3000/api/table/investors/create
+Content-Type: application/json
+
+Body:
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john.doe@example.com",
+  "status": "Active"
+}
+
+Response:
+{
+    "message": "Record created into table investors successfully"
+}
+```
+
+Get all records
+
+```
+GET http://localhost:3000/api/table/investors
+
+Response:
+[
+    {
+        "investorId": "55b1717b-2e81-4b61-8d1f-bbce5c1657de",
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john.doe@example.com",
+        "status": "Active",
+        "createdAt": "2024-11-26T09:01:19.490Z"
+    }
+]
+```
+
+Get specific columns
+
+```
+GET http://localhost:3000/api/table/investors/columns?columns=firstName,lastName,status
+
+Response:
+[
+    {
+        "firstName": "John",
+        "lastName": "Doe",
+        "status": "Active"
+    }
+]
+```
