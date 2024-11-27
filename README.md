@@ -37,9 +37,9 @@ Content-Type: application/json
 
 Body:
 {
-  "firstName": "John",
-  "lastName": "Doe",
-  "email": "john.doe@example.com",
+  "firstName": "Haward",
+  "lastName": "Jie",
+  "email": "haward.jie@columnardb.com",
   "status": "Active"
 }
 
@@ -58,9 +58,9 @@ Response:
 [
     {
         "investorId": "55b1717b-2e81-4b61-8d1f-bbce5c1657de",
-        "firstName": "John",
-        "lastName": "Doe",
-        "email": "john.doe@example.com",
+        "firstName": "Haward",
+        "lastName": "Jie",
+        "email": "haward.jie@columnardb.com",
         "status": "Active",
         "createdAt": "2024-11-26T09:01:19.490Z"
     }
@@ -75,8 +75,8 @@ GET http://localhost:3000/api/table/investors/columns?columns=firstName,lastName
 Response:
 [
     {
-        "firstName": "John",
-        "lastName": "Doe",
+        "firstName": "Haward",
+        "lastName": "Jie",
         "status": "Active"
     }
 ]
